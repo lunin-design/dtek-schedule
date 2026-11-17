@@ -2,7 +2,7 @@ name: Run power outages schedule generator
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "10,40 * * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [check-schedule]
