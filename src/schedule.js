@@ -35,6 +35,9 @@ const getShutdownsData = async ({ attempt = 0 } = {}) => {
     })
 
     const html = await browserPage.content()
+    console.log("Page URL:", browserPage.url())
+    console.log("Page title:", await browserPage.title())
+    console.log("Contains fact:", html.includes("fact"))
     const match = html.match(SHUTDOWNS_DATA_MATCHER)
 
     if (!match) {
